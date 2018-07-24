@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 /**
  * Created by dong_jie on 2018-07-21.
  */
@@ -25,13 +27,13 @@ public class SysOperService {
     }
 
     @WriteDataSource
-    public int updateLogStsByPhone(String operPhone){
-        return sysOperDao.updateLogStsByPhone(operPhone);
+    public int updateLogStsByPhone(Map map){
+        return sysOperDao.updateLogStsByPhone(map);
     }
 
     @WriteDataSource
-    public int updateFailTmByPhone(String operPhone){
-        return sysOperDao.updateFailTmByPhone(operPhone);
+    public int updateFailTmByPhone(Map map){
+        return sysOperDao.updateFailTmByPhone(map);
     }
 
 }

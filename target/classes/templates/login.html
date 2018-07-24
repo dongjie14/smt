@@ -4,7 +4,7 @@
 <head>
     <meta content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link th:href="@{/bootstrap/css/wholestyle.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
     <link th:href="@{/bootstrap/css/login.css}" rel="stylesheet"/>
     <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
     <script type="text/javascript" th:src="@{/scripts/md5.js}"/>
@@ -12,7 +12,7 @@
 </head>
 <body>
     <div>
-        <h1>欢迎进入<br>邻里我家-收银系统</h1>
+        <h1>欢迎进入<br>左邻右舍-收银系统</h1>
         <hr>
         <form id="loginForm" th:action="@{/sysOper/operLogin}" method="get" >
             <span>账号：<input type="text" id="operPhone" name="operPhone" placeholder="请输入您的账号" maxlength="11" /></span>
@@ -51,5 +51,6 @@
         $("#operPwd").val(operPwd);
         $("#loginForm").submit();
     }
+
 </script>
 </html>

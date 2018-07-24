@@ -45,9 +45,8 @@ public class AppExceptionHandler {
     public ModelAndView handleParameterException(Exception exception){
         logger.error("非法参数异常",exception);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("errCode",ApiErrorCode.INVALID_PARAMETER.getCode());
-        modelAndView.addObject("errMsg",ApiErrorCode.INVALID_PARAMETER.getMsg());
-        modelAndView.setViewName("error");
+        modelAndView.addObject("error",ApiErrorCode.INVALID_PARAMETER);
+        modelAndView.setViewName("common/error");
         modelAndView.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
         return modelAndView;
     }
@@ -61,9 +60,8 @@ public class AppExceptionHandler {
     public ModelAndView handleCommonException(Exception exception){
         logger.error("未知异常",exception);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("errCode",ApiErrorCode.UNKOWN_ERROR.getCode());
-        modelAndView.addObject("errMsg",ApiErrorCode.UNKOWN_ERROR.getMsg());
-        modelAndView.setViewName("error");
+        modelAndView.addObject("error",ApiErrorCode.UNKOWN_ERROR);
+        modelAndView.setViewName("common/error");
         modelAndView.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
         return modelAndView;
     }

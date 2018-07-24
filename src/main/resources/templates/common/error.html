@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
+    <title>错误页面</title>
+</head>
+<body>
+    <div th:class="div-body">
+        您好！您的请求出现了错误，详情请查看以下信息：<br>
+        错误码：<a th:text="${error.code}"></a><br>
+        错误信息：<a th:text="${error.msg}"></a><br>
+        <a href="">返回上一页</a>
+    </div>
+</body>
+</html>

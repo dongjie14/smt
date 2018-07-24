@@ -1,5 +1,5 @@
 div{
-    text-align: center; /*让div内部文字居中*/
+    text-align: center;
     background: linear-gradient(deepskyblue, white);
     border-radius: 20px;
     width: 300px;

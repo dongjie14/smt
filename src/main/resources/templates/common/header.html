@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
+    <script type="text/javascript" th:src="@{/scripts/overall-js.js}"/>
+</head>
+<body>
+    <div th:class="div-header">
+        <p>
+            <a id="operNm" name="operNm" style="font-weight: bold;font-size: 24px;" th:text="${sysOper.operNm}"></a>
+            <a href="">用户管理</a>
+            <a href="">库存管理</a>
+            <a href="">售货系统</a>
+            <a href="">销量统计</a>
+        </p>
+        <h1>
+            欢迎进入 左邻右舍-售货系统
+            <a class="exit" href="" th:text="退出"/>
+        </h1>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        var operNm = $("#operNm").text();
+        $("#operNm").text("您好！ "+operNm)
+    }
+
+</script>
+</html>

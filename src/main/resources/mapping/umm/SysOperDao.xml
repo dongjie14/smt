@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dj.umm.dao.SysOperDao">
     <select id="queryByPhone" resultType="com.dj.umm.entity.SysOper">
-        select oper_nm,oper_email,oper_pwd,oper_type,last_log_tm,log_sts,pwd_fail_tm
+        select oper_nm,oper_phone,oper_email,oper_pwd,oper_type,last_log_tm,log_sts,pwd_fail_tm
         from sys_oper where oper_phone=#{operPhone}
     </select>
-    <update id="updateLogStsByPhone">
-        update sys_oper set log_sts = ${logSts} where oper_phone=#{operPhone}
+    <update id="updateLogStsByPhone" parameterType="Map">
+        update sys_oper set log_sts = #{logSts} where oper_phone=#{operPhone}
     </update>
-    <update id="updateFailTmByPhone">
-        update sys_oper set pwd_fail_tm = ${pwdFailTm} where oper_phone=#{operPhone}
+    <update id="updateFailTmByPhone" parameterType="Map">
+        update sys_oper set pwd_fail_tm = #{pwdFailTm} where oper_phone=#{operPhone}
     </update>
 </mapper>

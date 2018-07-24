@@ -4,10 +4,16 @@
 <head>
     <meta content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link th:href="@{/bootstrap/css/wholestyle.css}" rel="stylesheet"/>
-    <title>错误页面</title>
+    <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
 </head>
 <body>
-<h1><a th:text="${errMsg}"></a></h1>
+<div th:class="div-footer">
+    <p>
+        <a href="">用户管理</a>
+        <a href="">库存管理</a>
+        <a href="">售货系统</a>
+        <a href="">销量统计</a>
+    </p>
+</div>
 </body>
 </html>

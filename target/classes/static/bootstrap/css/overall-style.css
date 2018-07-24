@@ -56,3 +56,50 @@ button {
     text-decoration: none;
     display: inline-block;
 }
+
+.div-body {
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.div-header {
+    background: linear-gradient(deepskyblue, white);
+    border-radius: 20px;
+    margin: auto;
+    position:absolute;
+    z-index:999;
+    top:0;
+    left: 0;
+    right: 0;
+}
+.div-header .p {
+    float: left;
+}
+.div-header h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+.div-header a {
+    text-decoration: none;
+    color: black;
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    margin-left: 40px;
+}
+.div-header .exit {
+    float: right;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 40px;
+}

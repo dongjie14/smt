@@ -4,12 +4,27 @@
 <head>
     <meta content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link th:href="@{/bootstrap/css/wholestyle.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
     <title>收银系统-首页</title>
 </head>
 <body>
-<div>
-    <h1>您好！<a th:text="${sysOper.operNm}"></a></h1>
-</div>
+    <iframe id="header" frameborder="0" framespacing="0" width="100%" height="88px" style="margin: 0; padding: 0;"></iframe>
+    <form>
+        <input type="text" hidden id="operNm" name="operNm" th:value="${sysOper.operNm}" />
+        <input type="text" hidden id="operPhone" name="operPhone" th:value="${sysOper.operPhone}" />
+        <input type="text" hidden id="operEmail" name="operEmail" th:value="${sysOper.operEmail}" />
+        <input type="text" hidden id="operType" name="operType" th:value="${sysOper.operType}" />
+    </form>
 </body>
+<script>
+    window.onload = function(){
+        var header = document.getElementById("header");
+        var operNm = $("#operNm").val();
+        var operPhone = $("#operPhone").val();
+        var operEmail = $("#operEmail").val();
+        var operType = $("#operType").val();
+        header.src = "/smt/header?operNm="+operNm+"&operPhone="+operPhone+"&operEmail="+operEmail+"&operType="+operType;
+    }
+</script>
 </html>
