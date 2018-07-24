@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, Palatino, serif;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 28px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size: 16px;
+}
+
+input[type="password"] {
+    width: 200px;
+    height: 28px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size: 16px;
+}
+
+button {
+    width: 58px;
+    height: 24px;
+    background-color: deepskyblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-mousemove {
+    width: 58px;
+    height: 24px;
+    background-color: deepskyblue;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-mouseout {
+    width: 58px;
+    height: 24px;
+    background-color: deepskyblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

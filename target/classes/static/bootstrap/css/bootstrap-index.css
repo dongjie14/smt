@@ -1,0 +1,13 @@
+div {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: linear-gradient(deepskyblue,white);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+h1 {
+    font-size: xx-large;
+}

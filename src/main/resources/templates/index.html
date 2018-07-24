@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/wholestyle.css}" rel="stylesheet"/>
+    <title>收银系统-首页</title>
+</head>
+<body>
+<div>
+    <h1>您好！<a th:text="${sysOper.operNm}"></a></h1>
+</div>
+</body>
+</html>

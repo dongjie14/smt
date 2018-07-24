@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/wholestyle.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/login.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
+    <script type="text/javascript" th:src="@{/scripts/md5.js}"/>
+    <title>收银系统-登录</title>
+</head>
+<body>
+    <div>
+        <h1>欢迎进入<br>邻里我家-收银系统</h1>
+        <hr>
+        <form id="loginForm" th:action="@{/sysOper/operLogin}" method="get" >
+            <span>账号：<input type="text" id="operPhone" name="operPhone" placeholder="请输入您的账号" maxlength="11" /></span>
+            <br><span class="span-login">* 账号为您的注册手机号</span>
+            <br><br>
+            <span>密码：<input type="password" id="operPwd" name="operPwd" placeholder="请输入您的密码" maxlength="8" /></span>
+            <br><span class="span-login">* 密码由数字、字母组成<br>不少于4位字符，不超过8位字符<br>密码连续错误5次用户将被锁定</span>
+            <br><br>
+            <button type="button" onmousemove="this.className='button-mousemove'"
+                    onmouseout="this.className='button-mouseout'" onclick="from_submit()" >登录</button>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="">忘记密码</a>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    function from_submit() {
+        var operPhone = $("#operPhone").val();
+        var operPwd = $("#operPwd").val();
+        var reg = new RegExp("^[0-9]*$");
+        if(!reg.test(operPhone) || operPhone.length < 11){
+            alert("您的账号输入有误，请重新输入");
+            $('#operPhone').val("");
+            $('#operPhone').focus();
+            return;
+        }
+        reg = new RegExp("^[A-Za-z0-9]+$");
+        if(!reg.test(operPwd) || operPhone.length < 4){
+            alert("您的密码输入有误，请重新输入");
+            $('#operPwd').val("");
+            $('#operPwd').focus();
+            return;
+        }
+
+        operPwd = $.md5(operPhone+$.md5(operPwd));
+        $("#operPwd").val(operPwd);
+        $("#loginForm").submit();
+    }
+</script>
+</html>
