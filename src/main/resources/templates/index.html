@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
     <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
+    <script type="text/javascript" th:src="@{/bootstrap/js/overall-js.js}"/>
     <title>收银系统-首页</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
         var operPhone = $("#operPhone").val();
         var operEmail = $("#operEmail").val();
         var operType = $("#operType").val();
-        header.src = "/smt/header?operNm="+operNm+"&operPhone="+operPhone+"&operEmail="+operEmail+"&operType="+operType;
+        header.src = encodeURI("/smt/header?operNm="+operNm+"&operPhone="+operPhone+"&operEmail="+operEmail+"&operType="+operType);
     }
 </script>
 </html>

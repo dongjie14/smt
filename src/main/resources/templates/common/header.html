@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link th:href="@{/bootstrap/css/overall-style.css}" rel="stylesheet"/>
     <script type="text/javascript" th:src="@{/scripts/jquery-2.1.4.js}"/>
-    <script type="text/javascript" th:src="@{/scripts/overall-js.js}"/>
 </head>
 <body>
     <div th:class="div-header">
@@ -17,9 +16,12 @@
             <a href="">售货系统</a>
             <a href="">销量统计</a>
         </p>
+        <form id="logoutForm" th:action="@{/sysOper/operLogout}" method="get" >
+            <input type="text" hidden id="operPhone" name="operPhone" th:value="${sysOper.operPhone}" />
+        </form>
         <h1>
             欢迎进入 左邻右舍-售货系统
-            <a class="exit" href="" th:text="退出"/>
+            <a class="exit">退出</a>
         </h1>
     </div>
 </body>
@@ -28,6 +30,5 @@
         var operNm = $("#operNm").text();
         $("#operNm").text("您好！ "+operNm)
     }
-
 </script>
 </html>

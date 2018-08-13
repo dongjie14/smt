@@ -48,6 +48,7 @@ public class OperLogoutController {
             modelAndView.addObject("error", ApiErrorCode.UNKOWN_ERROR);
             modelAndView.setViewName("common/error");
         }
+        modelAndView.setViewName("login");
         return modelAndView;
     }
 }
