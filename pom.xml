@@ -184,7 +184,7 @@
     </dependencies>
 
     <build>
-        <finalName>maven</finalName>
+        <finalName>smt</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
